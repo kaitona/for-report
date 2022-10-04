@@ -1,10 +1,9 @@
 import sys
 def inputData():
-    data = sys.stdin
-    formattingData = [line.replace("\n", "").split(" ") for line in data]
-    print(formattingData)
-    user = 0
-    patient = 0
+    infile = sys.stdin
+    formattingData = [line.replace("\n", "").split(" ") for line in infile]
+    users = 0
+    data = 0
     id = 0
     index = 0
 
@@ -13,10 +12,10 @@ def inputData():
             print("end")
             break
         if len(formattingData[index]) == 3:
-            user = formattingData[index][0]
-            patient = formattingData[index][1]
+            users = formattingData[index][0]
+            data = formattingData[index][1]
             id = formattingData[index][2]
-            print(user, patient, id)
+            print(users, data, id)
         index += 1
         
 inputData()
