@@ -24,9 +24,9 @@ def inputData():
             index += 1
             continue
 
-        if ((formattingData[index][0] in infectedList and formattingData[index][1] not in infectedList) or 
-        (formattingData[index][1] in infectedList and formattingData[index][0] not in infectedList)):
-            infectedList.append(formattingData[index][1])
+        if formattingData[index][0] in infectedList and formattingData[index][1] not in infectedList: infectedList.append(formattingData[index][1])
+        elif formattingData[index][1] in infectedList and formattingData[index][0] not in infectedList: infectedList.append(formattingData[index][0])
+            
         index += 1
         
 inputData()
